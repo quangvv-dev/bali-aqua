@@ -1,0 +1,32 @@
+
+
+/* Start:/bitrix/components/vinhhao/newproduct/templates/.default/style.css?1505422848475*/
+/*.banner_benefits {
+    width: 100%;
+    height: 340px;
+    background: top center;
+    background-size: cover;
+    position: relative;
+    padding-top: 120px
+}
+@media (max-width: 991px) {
+    .banner_benefits {
+        height: 200px;
+    }
+}
+@media (max-width: 767px) {
+    .banner_benefits {
+        padding-top: 86px;
+    }
+}
+
+.banner-top{
+    padding-top: 160px
+}
+@media (max-width: 767px) {
+    .banner-top{
+        padding-top: 90px
+    }
+}*/
+/* End */
+/* /bitrix/components/vinhhao/newproduct/templates/.default/style.css?1505422848475 */
