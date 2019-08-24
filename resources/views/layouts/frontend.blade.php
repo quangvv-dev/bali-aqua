@@ -11,13 +11,13 @@
     <title>@yield('title')</title>
     <meta property="og:url" content=""/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Nước Khoáng Vĩnh Hảo, Đích Thực Từ Nguồn Khoáng Thiên Nhiên, Tốt Cho Sức Khỏe"/>
+    <meta property="og:title" content="Nước Khoáng Bali AQUA, Đích Thực Từ Nguồn Khoáng Thiên Nhiên, Tốt Cho Sức Khỏe"/>
     <meta property="og:description"
-          content="Nước Khoáng Vĩnh Hảo, Đích Thực Từ Nguồn Khoáng Thiên Nhiên, Tốt Cho Sức Khỏe"/>
+          content="Nước Khoáng Bali AQUA, Đích Thực Từ Nguồn Khoáng Thiên Nhiên, Tốt Cho Sức Khỏe"/>
 
     <meta name="title" content="@yield('meta-title')">
     <meta name="description" content="@yield('meta-description')">
-    <meta property="og:image" content="bitrix/templates/vinhhao_140617/img/fb_share.png"/>
+    <meta property="og:image" content=""/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="robots" content="index, follow"/>
 
