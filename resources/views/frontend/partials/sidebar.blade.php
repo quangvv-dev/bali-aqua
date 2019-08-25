@@ -1,17 +1,31 @@
 <!-- Sidebar -->
 <div class="sidebar nav-mobile hidden-sm hidden-md hidden-lg">
-    <ul class="main-menu">
-        
-        <li class="active"><a href="index.html">Trang chủ</a></li>
-        <li class=""><a href="cau-chuyen-vinh-hao.html">Câu chuyện vĩnh hảo</a></li>
-        <li class=""><a href="san-pham.html">Sản phẩm</a></li>
-        <li class=""><a href="gioi-thieu.html">Giới thiệu</a></li>
-        <li class=""><a href="tintuc-sukien/index.html">Tin tức & Sự kiện</a></li>
-        <li class=""><a href="codong/hoat-dong-co-dong.html">Quan hệ cổ đông</a></li>
-        <li class=""><a href="lien-he.html">Liên hệ</a></li>
-    </ul>
+    @php
+        $menu = \App\Helpers\Helper::getMenu('main-menu');
+    @endphp
+    @if($menu)
+        @php
+            $isMeetMiddle = false;
+            $isActive = '';
+            $middle = count($menu->items)/2;
+        @endphp
+        <ul class="main-menu">
+            @for ($k = 0 ; $k < count($menu->items); $k++)
+                @php
+                    $item = $menu->items[$k];
+                    $isActive = (Request::fullUrl() == $item['url']) ? 'active' : '';
+                    if ($k == $middle && !$isMeetMiddle){
+                        $k = $k - 1;
+                        $isMeetMiddle = true;
+                        continue;
+                    }
+                @endphp
+                <li class={{$isActive}}><a @if($item['external']) target="_blank" @endif href="{{$item['url']}}">{{$item['title']}}</a></li>
+            @endfor
+@endif
+        </ul>
     <div class="hotline">
-        <a href="tel:18006068">HOTLINE 18006068</a>
+        <a href="tel:{{$settings->hotline}}}">{{$settings->hotline}}</a>
     </div>
 </div>
 <!-- /#sidebar-wrapper -->
